@@ -4,21 +4,22 @@
 }
 
 .form {
-  position: fixed;
-  align-items: center;
-  justify-content: center;
-  /* border: 2px solid red; */
+  border: 10px solid yellow;
   display: flex;
+  position: fixed;
   top: 80px;
   bottom: 0;
   left: 0;
   right: 0;
+  align-items: center;
+  justify-content: center;
 }
 
 .wrapper {
-  box-sizing: border-box;
   display: flex;
+  box-sizing: border-box;
   align-items: center;
+  border: 2px solid yellow;
   height: 490px;
   width: 400px;
   flex-direction: column;
@@ -26,6 +27,13 @@
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(253, 252, 252, 0.5);
   transition: transform 0.3s;
+}
+
+@media screen and (max-width: 450px) {
+  .wrapper {
+    width: 80%;
+    height: 45%;
+  }
 }
 
 .wrapper:hover {
@@ -43,7 +51,7 @@
 }
 
 .form-input {
-  width: 320px;
+  width: 80%;
   padding: 10px;
   border: 2px solid green;
   color: green;
