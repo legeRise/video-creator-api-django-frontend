@@ -1,6 +1,10 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
 body {
   margin: 0;
-  /* background-color: rgba(14, 204, 163, 0.05); */
   background-color: rgb(226, 42, 226);
   font-family: arial;
   padding-top: 80px;
@@ -13,6 +17,7 @@ p {
 }
 
 .header {
+  display: flex;
   position: fixed;
   top: 0;
   left: 0;
@@ -20,16 +25,69 @@ p {
   height: 60px;
   padding-right: 20px;
   padding-left: 20px;
-  display: flex;
   background-color: rgb(143, 113, 13);
+  justify-content: space-between;
   align-items: center;
   border-radius: 5px;
-  justify-content: space-between;
   z-index: 10;
 }
 
-.left-section {
-  flex: 1;
+/* start ---- designing ham menu bar */
+span {
+  position: absolute;
+  width: 45px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: yellow;
+  left: 2px;
+}
+#bar1 {
+  top: 8px;
+}
+#bar2 {
+  top: 23px;
+}
+#bar3 {
+  top: 38px;
+}
+/* end ------ designing ham menu bar */
+
+/* hiding ham menu until a certain width is reached */
+.ham-container {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .ham-container {
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    left: 12px;
+    top: 5px;
+    z-index: 11;
+  }
+
+  .left-section,
+  .right-section {
+    display: none;
+  }
+
+  .header.active {
+    position: fixed;
+    flex-direction: column;
+    height: 230px;
+    padding-top: 60px;
+    padding-bottom: 20px;
+  }
+
+  .header.active .left-section,
+  .header.active .right-section {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .left-section .nav-link,
@@ -38,11 +96,7 @@ p {
   text-decoration: none;
   color: yellow;
   font-weight: bold;
-  white-space: nowrap;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px;
 }
 
 .left-section .nav-link:hover,
@@ -51,18 +105,14 @@ p {
   text-decoration-thickness: 2px;
 }
 
-.right-section {
-  width: 13%;
-}
-
 .nav-link.active {
   background-color: yellow;
+  width: 100%;
+  text-align: center;
   color: green;
   border-radius: 5px;
 }
+
 .nav-link.active:hover {
   text-decoration: none;
-  background-color: yellow;
-  color: green;
-  border-radius: 5px;
 }
