@@ -77,6 +77,8 @@ span {
     position: fixed;
     flex-direction: column;
     height: 230px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
     padding-top: 60px;
     padding-bottom: 20px;
   }
