@@ -4,7 +4,6 @@
 }
 
 .form {
-  border: 10px solid yellow;
   display: flex;
   position: fixed;
   top: 80px;
