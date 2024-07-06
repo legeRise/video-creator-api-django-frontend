@@ -71,22 +71,22 @@
   opacity: 0;
 }
 
-#create-button {
+.my-button {
   background-color: white;
   color: green;
   font-weight: bold;
   font-size: 18px;
   padding: 10px;
+  margin-top: 10px;
   border-radius: 5px;
   border: none;
   color: green;
   box-shadow: 0 2px #333;
   transform: translateY(4px); /* Move button down */
-
   transition: all 0.3s ease-in-out;
 }
 
-#create-button:hover {
+.my-button:hover {
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
   color: green;
   background-color: white;
@@ -94,9 +94,18 @@
   transform: scale(1.1);
 }
 
-#create-button:active {
+.my-button:active {
   background-color: white; /* Darker green when pressed */
   color: green;
   box-shadow: 0 2px #333;
   transform: translateY(4px); /* Move button down */
+}
+
+#download-button {
+  display: none;
+}
+
+#download-button a {
+  text-decoration: none;
+  color: green;
 }
